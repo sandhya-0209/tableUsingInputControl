@@ -1,0 +1,27 @@
+
+<table
+  *ngIf="getstdArray.length > 0; else noData"
+  class="table table-bordered"
+>
+  <thead class="text-white bg-secondary">
+    <tr>
+      <td>Sr No</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Contact</td>
+      <td>Email</td>
+    </tr>
+  </thead>
+  <tbody class="table-info">
+    <tr *ngFor="let data of getstdArray; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ data.fname }}</td>
+      <td>{{ data.lname }}</td>
+      <td>{{ data.contact }}</td>
+      <td>{{ data.email }}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noData>
+  <p class="alert alert-info mt-4">No Data Available !!!</p>
+</ng-template>

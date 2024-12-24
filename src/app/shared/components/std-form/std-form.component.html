@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" #firstname id="firstname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" #lastname id="lastname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="text" #contact id="contact" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" #email id="email" class="form-control">
+  </div>
+  <button
+    (click)="addStddata()"
+    class="btn btn-sm btn-info btn-block text-white">
+    Add Student
+  </button>
